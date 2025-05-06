@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+    }
+
+    .products-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .product {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 200px;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .product:hover {
+      transform: scale(1.05);
+    }
+
+    .product h3 {
+      margin: 0 0 10px;
+    }
+
+    .product button {
+      background-color: #ffd700;
+      border: none;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .product button:hover {
+      background-color: #040404;
+      color: white;
+    }
+
+    .cart-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background-color: #ffd700;
+      color: white;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .cart-button:hover {
+      background-color: #040404;
+    }
+
+    .cart-modal {
+      display: none;
+      position: fixed;
+      bottom: 80px;
+      right: 20px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .cart-modal.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="products-container">
+    <div class="product">
+      <h3>Producto 1</h3>
+      <p>Precio: $100</p>
+      <button onclick="addToCart('Producto 1', 100)">Añadir al carrito</button>
+    </div>
+
+    <div class="product">
+      <h3>Producto 2</h3>
+      <p>Precio: $200</p>
+      <button onclick="addToCart('Producto 2', 200)">Añadir al carrito</button>
+    </div>
+  </div>
+
+  <button class="cart-button" onclick="toggleCart()">🛒</button>
+
+  <div id="cart" class="cart-modal">
+    <h3>Carrito</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+    <button onclick="checkout()">Comprar</button>
+  </div>
+
+  <script>
+    const cart = [];
+
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      updateCart();
+      document.getElementById('cart').classList.add('active');
+    }
+
+    function updateCart() {
+      const cartItems = document.getElementById('cart-items');
+      const cartTotal = document.getElementById('cart-total');
+      cartItems.innerHTML = '';
+      let total = 0;
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price}`;
+        cartItems.appendChild(li);
+        total += item.price;
+      });
+      cartTotal.textContent = total;
+    }
+
+    function toggleCart() {
+      const cartModal = document.getElementById('cart');
+      cartModal.classList.toggle('active');
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert('El carrito está vacío');
+        return;
+      }
+      alert('Compra realizada con éxito');
+      cart.length = 0;
+      updateCart();
+      toggleCart();
+    }
+  </script>
+</body>
+</html>

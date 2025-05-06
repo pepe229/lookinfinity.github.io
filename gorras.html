@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorras</title>
+    <link rel="stylesheet" href="x.css">
+    <script src="scrip.js"></script>
+</head>
+<body>
+    <button class="cart-button" onclick="toggleCart()">
+        <img src="carrito.jpg" alt="Carrito" class="cart-image">
+</button>
+
+    <!-- Ventana del carrito -->
+    <div class="cart" id="cart">
+        <h2>Tu Carrito</h2>
+        <ul id="cart-items"></ul>
+        <div class="total" id="total">Total: $0.00</div>
+        <button onclick="checkout()">Comprar Todo</button>
+    </div>
+    <div>
+ <h1>Gorras</h1>
+
+
+    <div class="grid-container">
+        <div class="producto">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkUKpG0KsRcUc1JlGjaX0BA63wjXd5LkS2Vw&s" 
+                 alt="Gorra New Era Yankees" >
+            <h3> gorra de los yankees Web 59FIFTY multicolor</h3>
+            <h5>180$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 2', 180)">Añadir al carrito</button>
+        </div>
+
+
+
+        <div class="producto">
+            <img src="https://www.neweracap.com/cdn/shop/files/60627014_59FIFTY_ACMILANXNYY24_ACMILAN_SCA_3QR.jpg?v=1724779896&width=823" alt="New York Yankees 59FIFTY Fitted">
+            <h3>New York Yankees 59FIFTY Fitted</h3>
+            <h5>$95.99</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 2', 95.99)">Añadir al carrito</button>
+        </div>
+ 
+       <div class="producto">
+         <img src="https://www.neweracap.com/cdn/shop/files/70890738_59FIFTY_JUSTCAPSWS24_NEYYANCO_GRN_3QR.jpg?v=1724938648&width=823" alt="Just Caps World Series 595FIFTY Fitted">
+         <h3>Just Caps World Series 595FIFTY Fitted</h3>
+         <h5>$46.99</h5>
+         <button class="boton-negro" onclick="addToCart('Producto 2', 46.99)">Añadir al carrito</button>
+       </div>
+
+
+        <div class="producto">
+            <img src="https://www.neweracap.com/cdn/shop/files/60540341_9FIFTY_950ALPHAMLB1086_LOSDOD_BLK_3QL.jpg?v=1724853398&width=823" 
+                 alt="Gorra New Era Dodgers">
+            <h3>Alpha Industries Black 9FIFTY Snapback</h3>
+            <h5>$46.99</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 2', 46.99)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://www.neweracap.com/cdn/shop/products/8916298268702.jpg?v=1648517610&width=600" 
+                 alt="Boston Red Sox Authentic Collection Alt 59FIFTY Fitted">
+            <h3>Boston Red Sox
+
+                Authentic Collection Alt 59FIFTY Fitted</h3>
+            <h5>150$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 2', 150)">Añadir al carrito</button>
+        </div>
+    
+
+
+        <div class="producto">
+           <img src="https://www.neweracap.com/cdn/shop/files/60624956_59FIFTY_FELT595024840_SADPAD_OTC_3QL.jpg?v=1730994171&width=823" alt="FELT Brown 59FIFTY Fitted">
+            <h3>FELT Brown 59FIFTY Fitted</h3>
+            <h5>$49.99</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 2', 49.99)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://www.neweracap.com/cdn/shop/products/70742173_59FIFTY_JUSTCAPSASG_LOSLAK_BLACK_3QL.png?v=1675893040&width=600" alt="Los Angeles Lakers Tri-Color 59FIFTY Fitted">
+            <h3>Los Angeles Lakers Tri-Color 59FIFTY Fitted</h3>
+            <h5>$50.99</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 2', 50.99)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://www.neweracap.com/cdn/shop/files/60585343_59FIFTY_NEGLOBAL59FIFTY_CHIBUL_BLK_3QL.jpg?v=1723036188&width=823" alt="Chicago Bulls Global 59FIFTY Fitted">
+            <h3>Chicago Bulls 59FIFTY Fitted</h3>
+            <h5>$47.99</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 2', 47.99)">Añadir al carrito</button>
+        </div>
+
+<div class="producto">
+    <img src="https://www.neweracap.com/cdn/shop/files/60429551_59FIFTY_CityEdition_BRONET_BRW_3QR.jpg?v=1698438266&width=823" alt="Brooklyn Nets
+
+    2023 City Edition Tan 59FIFTY Fitted">
+    <h3>Brooklyn Nets 2023 City Edition Tan 59FIFTY Fitted</h3>
+    <h5>$39.99</h5>
+    <button  class="boton-negro" onclick="addToCart('Producto 2', 39.99)">Añadir al carrito</button>
+</div>
+    <div class="producto">
+        <img src="https://www.neweracap.com/cdn/shop/files/60645832_59FIFTY_LifestyleEnergy_CHIBUL_STN_3QR.jpg?v=1732042122&width=823" alt="Chicago Bulls Novelty Holly 59FIFTY Fitted">
+        <h3>Chicago Bulls Novelty Holly 59FIFTY Fitted</h3>
+        <h5>$50.00</h5>
+        <button class="boton-negro" onclick="addToCart('Producto 2', 50)">Añadir al carrito</button>
+    </div>
+<footer> 
+    <p>&COPY; <a href="index.html">INICIO INFINITY</a>   </p>
+</footer>
+
+</body>
+</html>

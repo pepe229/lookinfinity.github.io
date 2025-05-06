@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenis</title>
+    <link rel="stylesheet" href="x.css">
+    <script src="scrip.js"></script>
+</head>
+<body>
+    <button class="cart-button" onclick="toggleCart()">
+        <img src="carrito.jpg" alt="Carrito" class="cart-image">
+</button>
+
+    <!-- Ventana del carrito -->
+    <div class="cart" id="cart">
+        <h2>Tu Carrito</h2>
+        <ul id="cart-items"></ul>
+        <div class="total" id="total">Total: $0.00</div>
+        <button onclick="checkout()">Comprar Todo</button>
+    </div>
+    <div>
+    <h1>Tenis</h1>
+
+    <div class="grid-container">
+        <div class="producto">
+            <img src="https://media.gq-magazine.co.uk/photos/643670065a5350ccaaa4cda8/master/w_1600%2Cc_limit/Jordan1.jpg" 
+                 alt="Jordan 1" width="200" height="200">
+            <h3>Jordan 1</h3>
+            <h5>189.99$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 1', 189.99  )">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://cdn.flightclub.com/1500/TEMPLATE/307018/2.jpg" 
+                 alt="Jordan 2" width="200" height="200">
+            <h3>Jordan 2</h3>
+            <h5>120$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 1',120 )">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.DVd5DsZsaJGxXrVBO_BfpgHaFS?rs=1&pid=ImgDetMain" 
+                 alt="Jordan 3" width="200" height="200">
+            <h3>Jordan 3</h3>
+            <h5>300$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 1', 300)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://th.bing.com/th/id/R.3c2e377f8d3f6a5d0be0de40bf9d247a?rik=x09eGtqr%2fLNhxg&pid=ImgRaw&r=0" 
+                 alt="Jordan 4 Yellow" width="200" height="200">
+            <h3>Jordan 4 Yellow</h3>
+            <h5>85$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 1', 85)">Añadir al carrito</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+<footer> 
+    <p>&COPY; <a href="index.html">INICIO INFINITY</a>   </p>
+</footer>
+
+
+
+</body>
+</html>

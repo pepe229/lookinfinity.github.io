@@ -1,0 +1,68 @@
+<<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pantalones</title>
+    <link rel="stylesheet" href="x.css">
+</head>
+<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorras</title>
+    <link rel="stylesheet" href="x.css">
+    <script src="scrip.js"></script>
+</head>
+
+<button class="cart-button" onclick="toggleCart()">
+    <img src="carrito.jpg" alt="Carrito" class="cart-image">
+</button>
+<!-- Ventana del carrito -->
+<div class="cart" id="cart">
+    <h2>Tu Carrito</h2>
+    <ul id="cart-items"></ul>
+    <div class="total" id="total">Total: $0.00</div>
+    <button onclick="checkout()">Comprar Todo</button>
+</div>
+<div>
+    <h1>Pantalones</h1>
+
+    <div class="grid-container">
+        <div class="producto">
+            <img src="https://i.pinimg.com/736x/66/8d/49/668d49c66a174effa34f6df33a8fb330.jpg" 
+                 alt="Pantalón para hombres con diseño" width="200" height="200">
+            <h3>Pantalón para hombres con diseño</h3>
+            <h5>100$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 1', 100)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://i.pinimg.com/736x/4d/87/66/4d87669cd61049ffb1debfa3b3125d68.jpg" 
+                 alt="Pantalón para hombres con rotos" width="200" height="200">
+            <h3>Pantalón para hombres con rotos</h3>
+            <h5>125$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 1', 125)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.GsP19aFhpBxTPP-ZOfNWpwHaJx?pid=ImgDet&w=184&h=242&c=7&dpr=1,3" 
+                 alt="Pantalón para hombres color negro con roto" width="200" height="200">
+            <h3>Pantalón para hombres color negro con roto</h3>
+            <h5>150$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 1', 150)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://images.beautifulhalo.com/images/v/201908/A/1564990439745.jpg" 
+                 alt="Pantalón para hombres color blanco con roto y diseño" width="200" height="300">
+            <h3>Pantalón para hombres color blanco con roto y diseño</h3>
+            <h5>200$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 1', 200)">Añadir al carrito</button>
+        </div>
+    </div>
+    <footer> 
+    <p>&COPY; <a href="index.html">INICIO INFINITY</a>   </p>
+</footer>
+
+</body>
+</html>

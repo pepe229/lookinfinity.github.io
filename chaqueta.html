@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaqueta</title>
+    <link rel="stylesheet" href="x.css">
+    <script src="scrip.js"></script>
+</head>
+<body>
+
+ <button class="cart-button" onclick="toggleCart()">
+        <img src="carrito.jpg" alt="Carrito" class="cart-image">
+</button>
+
+ 
+  <div class="cart" id="cart">
+    <h2>Tu Carrito</h2>
+    <ul id="cart-items"></ul>
+    <div class="total" id="total">Total: $0.00</div>
+    <button onclick="checkout()">Comprar Todo</button>
+</div>
+<div>
+
+
+
+
+     <h1>Chaquetas y Camisetas</h1>
+
+    <div class="grid-container">
+        <div class="producto">
+            <img src="https://images.stockx.com/images/AMIRI-Paint-Drip-Logo-Tee-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1649907013" 
+                 alt="Camiseta AMIRI">
+            <h3>Camiseta AMIRI</h3>
+            <h5>350$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 1', 350)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="data:image/jpeg;base64,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 " 
+                 alt="Chaqueta Trapstar">
+            <h3>Chaqueta Trapstar</h3>
+            <h5>430$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 1', 430)">Añadir al carrito</button> 
+        </div>
+
+        <div class="producto">
+            <img src="https://melazawear.com/wp-content/uploads/2020/09/melaza_17-scaled.jpg" 
+                 alt="Camiseta Drip">
+            <h3>Camiseta Drip</h3>
+            <h5>550$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 1', 550)">Añadir al carrito</button>
+        </div>
+
+        <div class="producto">
+            <img src="https://th.bing.com/th/id/OIP.KbGD-7WtxRuUpBu3pdlRNwAAAA?w=450&h=559&rs=1&pid=ImgDetMain" 
+                 alt="Chaqueta Hakulla aka">
+            <h3>Chaqueta Hakulla aka</h3>
+            <h5>1500$</h5>
+            <button class="boton-negro" onclick="addToCart('Producto 1', 1500)">Añadir al carrito</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <footer> 
+        <p>&COPY; <a href="index.html">INICIO INFINITY</a></p>
+    </footer>
+</body>
+</html>
